@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactive Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Interactive Features</h1>
+            <p>Explore event handling, interactive elements, and form validation</p>
+        </header>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+
+        <div class="flex">
+            <!-- Event Examples Section -->
+            <section class="card">
+                <h2>Event Handling Examples</h2>
+                
+                <div class="form-group">
+                    <label for="keyInput">Keyboard Events:</label>
+                    <input type="text" id="keyInput" placeholder="Type something...">
+                    <p id="keyFeedback">Key presses will be shown here</p>
+                </div>
+
+                <div class="form-group">
+                    <button id="clickButton">Click Me!</button>
+                    <p id="clickFeedback">Button not clicked yet</p>
+                </div>
+
+                <div class="form-group">
+                    <div id="mouseArea" style="height: 100px; border: 2px dashed var(--primary-color); border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                        Hover over me or double click
+                    </div>
+                    <p id="mouseFeedback">Mouse events will be shown here</p>
+                </div>
+            </section>
+
+            <!-- Interactive Features Section -->
+            <section class="card">
+                <h2>Interactive Elements</h2>
+                
+                <h3>Counter Game</h3>
+                <div class="counter-display" id="counterValue">0</div>
+                <button id="incrementBtn">Increment</button>
+                <button id="decrementBtn">Decrement</button>
+                <button id="resetCounterBtn">Reset</button>
+
+                <h3 style="margin-top: 20px;">FAQ Section</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is JavaScript?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>JavaScript is a programming language that enables interactive web pages. It is an essential part of web applications.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are event listeners?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Event listeners are functions that wait for a specific event to occur on a particular DOM element, then execute code in response.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="flex">
+            <!-- Dropdown Menu -->
+            <section class="card">
+                <h2>Dropdown Menu</h2>
+                <div class="dropdown">
+                    <button>Hover for Options</button>
+                    <div class="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                    </div>
+                </div>
+                <p style="margin-top: 15px;">This dropdown appears on hover using CSS and JavaScript.</p>
+            </section>
+
+            <!-- Tabbed Interface -->
+            <section class="card">
+                <h2>Tabbed Interface</h2>
+                <div class="tab">
+                    <button class="tablinks active" data-tab="Tab1">Tab 1</button>
+                    <button class="tablinks" data-tab="Tab2">Tab 2</button>
+                    <button class="tablinks" data-tab="Tab3">Tab 3</button>
+                </div>
+
+                <div id="Tab1" class="tabcontent" style="display: block;">
+                    <h3>First Tab Content</h3>
+                    <p>This is the content of the first tab. Tabs are great for organizing content in a compact space.</p>
+                </div>
+
+                <div id="Tab2" class="tabcontent">
+                    <h3>Second Tab Content</h3>
+                    <p>Here's the content for the second tab. Each tab can contain different types of information.</p>
+                </div>
+
+                <div id="Tab3" class="tabcontent">
+                    <h3>Third Tab Content</h3>
+                    <p>Finally, this is the third tab content. Tabbed interfaces are common in modern web design.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Form Validation -->
+        <section>
+            <h2>Form Validation</h2>
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error" id="nameError">Please enter a valid name (letters only, 2+ characters)</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <div class="error" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                    <div class="error" id="confirmPasswordError">Passwords do not match</div>
+                </div>
+
+                <button type="submit">Submit Form</button>
+                
+                <div class="success" id="formSuccess">
+                    Form submitted successfully! ✅
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <p>JavaScript Interactive Demo &copy; 2023</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
